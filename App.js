@@ -39,6 +39,8 @@ export default function App() {
           <AddTodo submitHandler={submitHandler} />
           <View style={styles.list}>
             <FlatList
+             showsHorizontalScrollIndicator={false}
+             showsVerticalScrollIndicator={false}
               data={todos}
               renderItem={({ item }) => (
                 <TodoItem item={item} pressHandler={pressHandler} />
@@ -58,8 +60,10 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 40,
+    flex : 1
   },
   list: {
     marginTop: 20,
+    flex : 1
   },
 });
