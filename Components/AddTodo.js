@@ -12,12 +12,11 @@ const AddTodo = ({submitHandler}) => {
             text : val
         }));
     }
-    async function submitAndClear (){
-        //submitHandler(text.text)
-        await setText(prevText => ({
-            text : ''
-        }));
-        console.log(text);
+    function submitAndClear (){
+        submitHandler(text.text)
+        // setText(prevText => ({
+        //     text : ''
+        // }));
     }
 
     return (
